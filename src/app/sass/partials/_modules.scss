@@ -1,11 +1,82 @@
 @include aoa-bg-series($bg__init,$classes_init);
 
+.about{
+    &-s4{
+        background-blend-mode: multiply !important;
+        background-color: #444 !important;
+    }
+}
 .comingsoon-s1{
     background-blend-mode: multiply;
+}
+.contact,.menu{
+    &-s3{
+        background-blend-mode: multiply !important;
+        background-color: #444 !important;
+    }
 }
 .error-s1{
     background-blend-mode: multiply;
 }
 .privacy-s1{
     background-blend-mode: multiply;
+}
+.text{
+    &-shadow{
+        text-shadow: $text__shadow;
+    }
+}
+nav{
+    z-index: 10;
+}
+@media all and (max-width: 767px){
+    .about{
+        &-s1,&-s2,&-s3{
+            * {
+                color: #fff!important;
+                text-shadow: $text__shadow;
+            }
+            background-blend-mode: multiply !important;
+            background-color: #666 !important;
+        }
+        &-s3{
+            background-position: right!important;
+        }
+    }
+    .contact{
+        &-s1,&-s2{
+            * {
+                color: #fff!important;
+                text-shadow: $text__shadow;
+            }
+            background-blend-mode: multiply !important;
+            background-color: #666 !important;
+        }
+        &-s1{
+            background-position: right!important;
+        }
+    }
+    .index,.menu{
+        &-s1{
+            * {
+                color: #fff!important;
+                text-shadow: $text__shadow;
+            }
+            background-blend-mode: multiply !important;
+            background-color: #666 !important;
+            background-position: right!important;
+        }
+    }
+    .navbar{
+        &-toggler{
+            background-color: #666;
+            border-color: #333;
+        }
+        &-nav{
+            background-color: #666;
+            border: 1px solid #333;
+            opacity: 0.9;
+            padding: 10px
+        }
+    }
 }
